@@ -1,0 +1,11 @@
+module  DisplaySel (input XT[15:0], output reg Tend);
+Tend = 0;
+
+always @(*)
+begin
+   if (XK[0]== 1 & XK[2]== 0 & XK[3]== 0 & XK[4]== 0 & XK[5]== 0 & XK[6]== 0 & XK[7]== 0 & XK[8]== 0 & XK[9]== 0 & XK[10]== 0 & XK[11]== 0 & XK[12]== 0 & XK[13]== 0 & XK[14]== 0 & XK[15]== 0 )
+		begin
+			Tend = 1
+   end
+end
+endmodule

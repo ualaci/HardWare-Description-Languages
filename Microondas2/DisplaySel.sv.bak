@@ -1,0 +1,35 @@
+//`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/14/2019 06:19:09 PM
+// Design Name: 
+// Module Name: rtl_simulation
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+module  DisplaySel (ShowC, ShowK, ShowT, DC[8], DT[8], DK[8]);
+
+input ShowK, ShowC, ShowT, DC[8], DT[8], DK[8];
+output reg DO[8];
+
+always @(*)
+begin
+   if (ShowK==1) 
+		begin
+			DO[0]=DC[0];
+   end
+
+end
+endmodule
