@@ -1,0 +1,57 @@
+//`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/14/2019 06:19:09 PM
+// Design Name: 
+// Module Name: rtl_simulation
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+module  SelectDisplay (ShowC, ShowK, ShowT, DC1, DC2, DC3, DC4, DK1, DK2, DK3, DK4, DT1, DT2, DT3, DT4, Y1, Y2, Y3, Y4);
+
+input ShowC, ShowK, ShowT, DC1, DC2, DC3, DC4, DK1, DK2, DK3, DK4, DT1, DT2, DT3, DT4;
+output reg Y1, Y2, Y3, Y4;
+
+always @(ShowC or ShowK or ShowT or DC1 or DC2 or DC3 or DC4 or DK1 or DK2 or DK3 or DK4 or DT1 or DT2 or DT3 or DT4)
+begin
+   if (ShowC == 1) 
+		begin
+			Y1=DC1;
+			Y2=DC2;
+			Y3=DC3;
+			Y4=DC4;
+			
+   end
+	
+	if (ShowK == 1)
+		begin
+			Y1=DK1;
+			Y2=DK2;
+			Y3=DK3;
+			Y4=DK4;
+			
+   end
+	
+	if (ShowT == 1) 
+		begin
+			Y1=DT1;
+			Y2=DT2;
+			Y3=DT3;
+			Y4=DT4;
+			
+   end
+
+end
+endmodule
